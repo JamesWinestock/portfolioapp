@@ -1,29 +1,26 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= image_tag @portfolio_item.image, class: 'img-rounded', width: '100%'%>
+            <h4>
+                <%= @portfolio_item.caption %>
+            </h4>
+            <p>
+                <%= @portfolio_item.description %>
+            </p>
+            <% if user_signed_in? %>
+              <%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %>
+              <%= link_to 'Back', new_portfolio_item_path %>
+              <% else %>
+              <%= link_to 'Back', new_portfolio_item_path %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @portfolio_item.image %>
-</p>
-
-<p>
-  <strong>Caption:</strong>
-  <%= @portfolio_item.caption %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @portfolio_item.description %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @portfolio_item.active %>
-</p>
-
-<p>
-  <strong>Order:</strong>
-  <%= @portfolio_item.order %>
-</p>
-
-<%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %> |
-<%= link_to 'Back', portfolio_items_path %>
+ |
