@@ -8,6 +8,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
 gem 'bootstrap-sass'
+gem 'rails-gallery'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
